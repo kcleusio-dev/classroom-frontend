@@ -26,7 +26,9 @@ function App() {
                         notificationProvider={useNotificationProvider()}
                         routerProvider={routerProvider}
                         options={{
-                            syncWithLocation: true, warnWhenUnsavedChanges: true, projectId: "bA0Yeq-jA1RT6-eKX2Pz",
+                            syncWithLocation: true,
+                            warnWhenUnsavedChanges: true,
+                            projectId: "bA0Yeq-jA1RT6-eKX2Pz",
                         }}
                         resources={[{
                             name: "Dashboard", list: "/", meta: {label: "Home", icon: <Home/>},

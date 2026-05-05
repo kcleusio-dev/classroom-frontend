@@ -30,25 +30,26 @@ function App() {
                             warnWhenUnsavedChanges: true,
                             projectId: "bA0Yeq-jA1RT6-eKX2Pz",
                         }}
-                        resources={[{
-                            name: "Dashboard", list: "/", meta: {label: "Home", icon: <Home/>},
-                        }, {
-                            name: "subjects",
-                            list: "/subjects",
-                            create: "/subjects/create",
-                            meta: {label: "Subjects", icon: <BookOpen/>}
-                        },]}
+                        resources={
+                            [{
+                                name: "Dashboard", list: "/", meta: {label: "Home", icon: <Home/>},
+                            }, {
+                                name: "subjects",
+                                list: "/subjects",
+                                create: "/subjects/create",
+                                meta: {label: "Subjects", icon: <BookOpen/>}
+                            },]
+                        }
                     >
                         <Routes>
-                            <Route element={<Layout>
-                                <Outlet/>
-                            </Layout>}>
+                            <Route element={
+                                <Layout>
+                                    <Outlet/>
+                                </Layout>}>
                                 <Route path="/" element={<Dashboard/>}/>
                                 <Route path="subjects">
                                     <Route index element={<SubjectList/>}/>
                                     <Route path="create" element={<SubjectCreate/>}/>
-
-
                                 </Route>
                             </Route>
                         </Routes>
